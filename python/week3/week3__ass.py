@@ -27,7 +27,7 @@ def main():
     """Main function to run the price calculation program."""
     try:
         price = float(input("Enter the original price: "))
-        discount_percent = float(input("Enter the discount percentage: ")) #Converts the user's input to a float.
+        discount_percent = float(input("Enter the discount percentage: "))
 
         if price < 0 or discount_percent < 0:
             print("Error: Price and discount percentage cannot be negative.")
