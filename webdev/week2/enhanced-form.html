@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced HTML5 Content & Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f6f6;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        h1, h2 {
+            color: #195B8A;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        ul {
+            margin: 1rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+        table, th, td {
+            border: 1px solid #bbb;
+        }
+        th, td {
+            padding: 0.5rem;
+            text-align: left;
+        }
+        img, video, audio {
+            display: block;
+            margin: 1rem 0;
+            max-width: 100%;
+        }
+        label {
+            display: block;
+            margin: 0.75rem 0 0.25rem;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        fieldset {
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            padding: 1rem;
+        }
+        legend {
+            font-weight: bold;
+        }
+        button {
+            padding: 0.75rem 1.5rem;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .subscribe-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .subscribe-row button {
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced HTML5: Content & Forms Demo</h1>
+        
+        <section>
+            <h2>Key HTML5 Features</h2>
+            <ul>
+                <li>Semantic elements for better structure</li>
+                <li>Native form validation without JavaScript</li>
+                <li>Accessible design with labels and fieldsets</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Sample Table: Course Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Topic</th>
+                        <th>Media</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML5 Basics</td>
+                        <td>
+                            <img src="assets/jeffrey-allee-e8Kl_iPHRBw-unsplash.jpg" 
+                                 alt="Scenic landscape with trees and sunlight" 
+                                 width="80" 
+                                 height="50" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Forms & Validation</td>
+                        <td>
+                            <audio controls>
+                                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Multimedia</td>
+                        <td>
+                            <video width="320" controls>
+                                <source src="assets/2122952-hd_1920_1080_30fps.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Contact Us</h2>
+            <form action="#" method="POST" autocomplete="on" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name" minlength="3">
+
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" readonly>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Details</legend>
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="HTML5">HTML5</option>
+                        <option value="CSS3">CSS3</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type your message here" minlength="10" required></textarea>
+                    
+                    <div class="subscribe-row">
+                        <label>
+                            <input type="checkbox" name="subscribe" value="yes">
+                            Subscribe to newsletter
+                        </label>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
