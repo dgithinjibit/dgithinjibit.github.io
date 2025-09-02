@@ -1,3 +1,0 @@
-This is the original text.
-It has multiple lines.
-We will modify this and write it to a new file.
